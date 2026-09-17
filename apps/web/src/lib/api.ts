@@ -1,15 +1,14 @@
 import { hc } from "hono/client";
 import type { AppType } from "@shelf/api";
-import { browser } from "$app/environment";
+import { env } from "$env/dynamic/public";
+
+const API_URL = env.PUBLIC_API_URL || "http://127.0.0.1:3000";
 
 export const getApiClient = (
   customFetch: typeof fetch,
   additionalHeaders?: Record<string, string>,
 ) => {
-  const url = browser
-    ? (import.meta.env.PUBLIC_API_URL || "/api")
-    : (process.env.PUBLIC_API_URL || "http://127.0.0.1:3000");
-  return hc<AppType>(url, {
+  return hc<AppType>(API_URL, {
     fetch: customFetch,
     headers: additionalHeaders,
   }) as any;
