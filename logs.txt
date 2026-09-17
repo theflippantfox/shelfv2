@@ -1,0 +1,98 @@
+$ turbo run dev
+• turbo 2.10.13
+
+   • Packages in scope: @shelf/api, @shelf/db, @shelf/shared, web
+   • Running dev in 4 packages
+   • Remote caching disabled
+
+@shelf/api:dev: cache bypass, force executing d73ada4e0df12dce
+web:dev: cache bypass, force executing fba330ef848925a0
+@shelf/api:dev: $ bun run --hot src/index.ts
+web:dev: $ vite dev
+@shelf/api:dev: ◇ injected env (3) from ../../.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+@shelf/api:dev: 23 | } else if (isServerConfig(entryNamespace?.default)) {
+@shelf/api:dev: 24 |    var server = globalThis[hmrSymbol];
+@shelf/api:dev: 25 |    if (server) {
+@shelf/api:dev: 26 |       server.reload(entryNamespace.default);
+@shelf/api:dev: 27 |       console.debug(`Reloaded ${server.development ? 'development ' : ''}server: ${server.protocol}://${server.hostname}:${server.port}`);
+@shelf/api:dev: 28 |       server = globalThis[hmrSymbol] = Bun.serve(entryNamespace.default);
+@shelf/api:dev:                                                      ^
+@shelf/api:dev: error: Failed to start server. Is port 3000 in use?
+@shelf/api:dev:  syscall: "listen",
+@shelf/api:dev:    errno: 0,
+@shelf/api:dev:     code: "EADDRINUSE"
+@shelf/api:dev: 
+@shelf/api:dev:       at bun:main:28:49
+web:dev: Port 5173 is in use, trying another one...
+web:dev: 10:56:22 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+web:dev: 10:56:22 AM [vite] (ssr) Re-optimizing dependencies because vite config has changed
+web:dev: 10:56:25 AM [vite] (ssr) [optimizer] bundling dependencies...
+web:dev: 10:56:25 AM [vite] (client) [optimizer] bundling dependencies...
+web:dev: 
+web:dev:   VITE v8.3.0  ready in 4669 ms
+web:dev: 
+web:dev:   ➜  Local:   http://localhost:5174/
+web:dev:   ➜  Network: use --host to expose
+@shelf/api:dev: ◇ injected env (0) from ../../.env // tip: ⌘ enable debugging { debug: true }
+@shelf/api:dev: 23 | } else if (isServerConfig(entryNamespace?.default)) {
+@shelf/api:dev: 24 |    var server = globalThis[hmrSymbol];
+@shelf/api:dev: 25 |    if (server) {
+@shelf/api:dev: 26 |       server.reload(entryNamespace.default);
+@shelf/api:dev: 27 |       console.debug(`Reloaded ${server.development ? 'development ' : ''}server: ${server.protocol}://${server.hostname}:${server.port}`);
+@shelf/api:dev: 28 |       server = globalThis[hmrSymbol] = Bun.serve(entryNamespace.default);
+@shelf/api:dev:                                                      ^
+@shelf/api:dev: error: Failed to start server. Is port 3000 in use?
+@shelf/api:dev:  syscall: "listen",
+@shelf/api:dev:    errno: 0,
+@shelf/api:dev:     code: "EADDRINUSE"
+@shelf/api:dev: 
+@shelf/api:dev:       at bun:main:28:49
+@shelf/api:dev: ◇ injected env (0) from ../../.env // tip: ⌘ suppress logs { quiet: true }
+@shelf/api:dev: 23 | } else if (isServerConfig(entryNamespace?.default)) {
+@shelf/api:dev: 24 |    var server = globalThis[hmrSymbol];
+@shelf/api:dev: 25 |    if (server) {
+@shelf/api:dev: 26 |       server.reload(entryNamespace.default);
+@shelf/api:dev: 27 |       console.debug(`Reloaded ${server.development ? 'development ' : ''}server: ${server.protocol}://${server.hostname}:${server.port}`);
+@shelf/api:dev: 28 |       server = globalThis[hmrSymbol] = Bun.serve(entryNamespace.default);
+@shelf/api:dev:                                                      ^
+@shelf/api:dev: error: Failed to start server. Is port 3000 in use?
+@shelf/api:dev:  syscall: "listen",
+@shelf/api:dev:    errno: 0,
+@shelf/api:dev:     code: "EADDRINUSE"
+@shelf/api:dev: 
+@shelf/api:dev:       at bun:main:28:49
+@shelf/api:dev: ◇ injected env (0) from ../../.env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+@shelf/api:dev: 23 | } else if (isServerConfig(entryNamespace?.default)) {
+@shelf/api:dev: 24 |    var server = globalThis[hmrSymbol];
+@shelf/api:dev: 25 |    if (server) {
+@shelf/api:dev: 26 |       server.reload(entryNamespace.default);
+@shelf/api:dev: 27 |       console.debug(`Reloaded ${server.development ? 'development ' : ''}server: ${server.protocol}://${server.hostname}:${server.port}`);
+@shelf/api:dev: 28 |       server = globalThis[hmrSymbol] = Bun.serve(entryNamespace.default);
+@shelf/api:dev:                                                      ^
+@shelf/api:dev: error: Failed to start server. Is port 3000 in use?
+@shelf/api:dev:  syscall: "listen",
+@shelf/api:dev:    errno: 0,
+@shelf/api:dev:     code: "EADDRINUSE"
+@shelf/api:dev: 
+@shelf/api:dev:       at bun:main:28:49
+@shelf/api:dev: ◇ injected env (0) from ../../.env // tip: ◈ secrets for agents [www.dotenvx.com]
+@shelf/api:dev: 23 | } else if (isServerConfig(entryNamespace?.default)) {
+@shelf/api:dev: 24 |    var server = globalThis[hmrSymbol];
+@shelf/api:dev: 25 |    if (server) {
+@shelf/api:dev: 26 |       server.reload(entryNamespace.default);
+@shelf/api:dev: 27 |       console.debug(`Reloaded ${server.development ? 'development ' : ''}server: ${server.protocol}://${server.hostname}:${server.port}`);
+@shelf/api:dev: 28 |       server = globalThis[hmrSymbol] = Bun.serve(entryNamespace.default);
+@shelf/api:dev:                                                      ^
+@shelf/api:dev: error: Failed to start server. Is port 3000 in use?
+@shelf/api:dev:  syscall: "listen",
+@shelf/api:dev:    errno: 0,
+@shelf/api:dev:     code: "EADDRINUSE"
+@shelf/api:dev: 
+@shelf/api:dev:       at bun:main:28:49
+Shutting down Turborepo tasks...
+Force killed Turborepo tasks: @shelf/api#dev, web#dev
+
+ Tasks:    0 successful, 2 total
+Cached:    0 cached, 2 total
+  Time:    4h33m13.589s 
+

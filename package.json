@@ -1,0 +1,23 @@
+{
+  "name": "shelf-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push"
+  },
+  "devDependencies": {
+    "bun-types": "^1.4.2",
+    "turbo": "latest"
+  },
+  "packageManager": "bun@1.4.2",
+  "dependencies": {
+    "drizzle-orm": "0.40.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"name": "web",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@internationalized/date": "^3.12.0",
+		"@lucide/svelte": "^1.46.0",
+		"@shelf/api": "workspace:*",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/kit": "^2.70.3",
+		"@sveltejs/vite-plugin-svelte": "^7.3.0",
+		"@tailwindcss/vite": "^4.3.3",
+		"bits-ui": "^2.18.0",
+		"lucide-svelte": "^1.0.1",
+		"mode-watcher": "^1.1.0",
+		"svelte": "5",
+		"svelte-check": "^4.7.6",
+		"tailwind-variants": "^3.3.0",
+		"tailwindcss": "^4.3.3",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"@shelf/shared": "workspace:*",
+		"@supabase/ssr": "^0.12.7",
+		"@supabase/supabase-js": "^2.116.0",
+		"clsx": "^2.1.1",
+		"hono": "^4.13.8",
+		"tailwind-merge": "^3.7.0"
+	}
+}
