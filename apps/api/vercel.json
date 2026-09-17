@@ -1,6 +1,6 @@
 {
   "installCommand": "bun install",
   "framework": null,
-  "buildCommand": null,
-  "outputDirectory": "api"
+  "buildCommand": "echo 'done'",
+  "outputDirectory": "."
 }
