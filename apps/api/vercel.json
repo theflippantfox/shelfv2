@@ -1,12 +1,6 @@
 {
   "installCommand": "bun install",
-  "functions": {
-    "src/vercel.ts": {
-      "runtime": "nodejs20.x",
-      "maxDuration": 30
-    }
-  },
   "routes": [
-    { "src": "/(.*)", "dest": "src/vercel.ts" }
+    { "src": "/(.*)", "dest": "/api" }
   ]
 }
