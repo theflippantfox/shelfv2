@@ -1,119 +1,7 @@
 $ vite build
 vite v8.3.0 building ssr environment for production...
 transforming...
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/categories/+page.svelte:10:33 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
- 8:   let { data } = $props<{ data: any }>();
- 9: 
-10:   let categories = $state<any[]>(data.categories ?? []);
-                                         ^
-11:   let showDialog = $state(false);
-12:   let editingId = $state<string | null>(null);
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:7:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
- 5: 
- 6:   let { data }: { data: any } = $props();
- 7:   const shop = data.activeShop;
-                       ^
- 8: 
- 9:   let paletteId = $state(shop.paletteId ?? "graphite-mint");
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:155:30 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-153:               : 'border-border/40 hover:border-border hover:bg-secondary/30'}"
-154:         >
-155:           <opt.icon size={20} class="{active ? 'text-foreground' : 'text-muted-foreground'}" />
-                                                                                                 ^
-156:           <div class="text-center">
-157:             <p class="text-[12px] font-bold text-foreground">{opt.label}</p>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
-4: 
-5:   let { data }: { data: any } = $props();
-6:   const shop = data.activeShop;
-                      ^
-7: 
-8:   let isSaving = $state(false);
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:51:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-49:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-50:           <div class="space-y-1.5">
-51:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Shop Name</label>
-                                                                                                                     ^
-52:             <input class="input-field" bind:value={formData.name} required />
-53:           </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:55:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-53:           </div>
-54:           <div class="space-y-1.5">
-55:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Slug (read-only)</label>
-                                                                                                                            ^
-56:             <input class="input-field bg-muted/40" value={shop.slug} disabled />
-57:           </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:71:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-69:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-70:           <div class="space-y-1.5">
-71:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
-                                                                                                                 ^
-72:             <input class="input-field" bind:value={formData.phone} placeholder="+91 98765 43210" />
-73:           </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:75:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-73:           </div>
-74:           <div class="space-y-1.5">
-75:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
-                                                                                                                 ^
-76:             <input class="input-field" type="email" bind:value={formData.email} placeholder="shop@example.com" />
-77:           </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:80:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-78:         </div>
-79:         <div class="space-y-1.5">
-80:           <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Address</label>
-                                                                                                                 ^
-81:           <textarea class="input-field" bind:value={formData.address} rows="2" placeholder="Full shop address…"></textarea>
-82:         </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:96:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-94:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-95:           <div class="space-y-1.5">
-96:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Type</label>
-                                                                                                                ^
-97:             <select class="input-field" bind:value={formData.defaultDiscountType}>
-98:               <option value="none">No default discount</option>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:105:14 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-103:           {#if formData.defaultDiscountType !== 'none'}
-104:             <div class="space-y-1.5">
-105:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                           ^
-106:                 Value {formData.defaultDiscountType === 'percentage' ? '(%)' : `(${data.activeShop?.currencySymbol ?? '$'})`}
-107:               </label>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/locale/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
-4: 
-5:   let { data }: { data: any } = $props();
-6:   const shop = data.activeShop;
-                      ^
-7: 
-8:   const timezones = [
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:9:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
- 7: 
- 8:   let { data }: { data: any } = $props();
- 9:   const shop = data.activeShop;
-                       ^
-10: 
-11:   let taxRateStr = $state(String(shop.taxRate ?? 0));
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:64:10 Self-closing HTML tags for non-void elements are ambiguous — use `<span ...></span>` rather than `<span ... />`
-https://svelte.dev/e/element_invalid_self_closing_tag
-62:       >
-63:         <div class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors {taxInclusive ? 'bg-primary' : 'bg-muted'}">
-64:           <span class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform {taxInclusive ? 'translate-x-4' : 'translate-x-0'}" />
-                                                                                                                                                                                    ^
-65:         </div>
-66:         <div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:12:24 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:12:24 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 10: 
 11:   let showEditDialog = $state(false);
@@ -121,7 +9,7 @@ https://svelte.dev/e/state_referenced_locally
                                 ^
 13:   let formPhone = $state(data.customer?.phone || "");
 14:   let formEmail = $state(data.customer?.email || "");
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:13:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:13:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 11:   let showEditDialog = $state(false);
 12:   let formName = $state(data.customer?.name || "");
@@ -129,7 +17,7 @@ https://svelte.dev/e/state_referenced_locally
                                  ^
 14:   let formEmail = $state(data.customer?.email || "");
 15:   let formNotes = $state(data.customer?.notes || "");
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:14:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:14:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 12:   let formName = $state(data.customer?.name || "");
 13:   let formPhone = $state(data.customer?.phone || "");
@@ -137,7 +25,7 @@ https://svelte.dev/e/state_referenced_locally
                                  ^
 15:   let formNotes = $state(data.customer?.notes || "");
 16:   let isSaving = $state(false);
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:15:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:15:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 13:   let formPhone = $state(data.customer?.phone || "");
 14:   let formEmail = $state(data.customer?.email || "");
@@ -145,7 +33,7 @@ https://svelte.dev/e/state_referenced_locally
                                  ^
 16:   let isSaving = $state(false);
 17: 
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:192:34 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:192:34 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
 https://svelte.dev/e/attribute_quoted
 190:         <div class="flex items-center gap-2 mb-2">
 191:           <div class="w-7 h-7 rounded-md {outstanding > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
@@ -153,7 +41,7 @@ https://svelte.dev/e/attribute_quoted
                                                                                                         ^
 193:           </div>
 194:           <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Outstanding</span>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:277:12 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:277:12 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 275:         <form onsubmit={handleUpdate} class="space-y-4">
 276:           <div class="space-y-1.5">
@@ -161,7 +49,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                       ^
 278:             <input bind:value={formName} required class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
 279:           </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:282:14 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:282:14 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 280:           <div class="grid grid-cols-2 gap-4">
 281:             <div class="space-y-1.5">
@@ -169,7 +57,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                     ^
 283:               <input bind:value={formPhone} type="tel" class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
 284:             </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:286:14 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:286:14 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 284:             </div>
 285:             <div class="space-y-1.5">
@@ -177,7 +65,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                     ^
 287:               <input bind:value={formEmail} type="email" class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
 288:             </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:291:12 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:291:12 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 289:           </div>
 290:           <div class="space-y-1.5">
@@ -185,79 +73,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                   ^
 292:             <textarea bind:value={formNotes} rows="2" class="w-full rounded-lg bg-muted/20 border border-border/50 px-3 py-2 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors resize-none"></textarea>
 293:           </div>
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:9:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
- 7: 
- 8:   let { data }: { data: any } = $props();
- 9:   let customers = $state<any[]>(data.customers ?? []);
-                                        ^
-10: 
-11:   let search = $state("");
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 Visible, non-interactive element `<div>` with a click event must be accompanied by a keyboard event handler. Consider whether an interactive element such as `<button type="button">` or `<a>` might be more appropriate
-https://svelte.dev/e/a11y_click_events_have_key_events
-198:                 {/if}
-199:                 <!-- Actions -->
-200:                 <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" onclick={(e: Event) => e.preventDefault()}>
-                           ^
-201:                   <button class="p-1.5 rounded-md hover:bg-secondary transition-colors" onclick={() => openEdit(c)} title="Edit">
-202:                     <Pencil size={13} class="text-muted-foreground" />
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 `<div>` with a click handler must have an ARIA role
-https://svelte.dev/e/a11y_no_static_element_interactions
-198:                 {/if}
-199:                 <!-- Actions -->
-200:                 <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" onclick={(e: Event) => e.preventDefault()}>
-                           ^
-201:                   <button class="p-1.5 rounded-md hover:bg-secondary transition-colors" onclick={() => openEdit(c)} title="Edit">
-202:                     <Pencil size={13} class="text-muted-foreground" />
-7:15:54 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/receipt/+page.svelte:8:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
- 6: 
- 7:   let { data }: { data: any } = $props();
- 8:   const shop = data.activeShop;
-                       ^
- 9: 
-10:   let header = $state(shop.receiptHeader || "");
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:308:22 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-306:                   <div class="flex gap-2 pl-6">
-307:                     <div class="flex-1">
-308:                       <label class="text-[10px] text-muted-foreground mb-0.5 block">Qty</label>
-                                                                                                    ^
-309:                       <input
-310:                         type="number"
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:322:22 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-320:                     </div>
-321:                     <div class="flex-1">
-322:                       <label class="text-[10px] text-muted-foreground mb-0.5 block">Condition</label>
-                                                                                                          ^
-323:                       <select
-324:                         onchange={(e) => {
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:357:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-355:         <!-- Notes -->
-356:         <div>
-357:           <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 block">Notes (optional)</label>
-                                                                                                                                        ^
-358:           <textarea
-359:             bind:value={returnNotes}
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:452:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-450:         <div class="grid grid-cols-2 gap-2 mb-3">
-451:           <div>
-452:             <label class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1 block">Discount</label>
-                                                                                                                                ^
-453:             <input
-454:               bind:value={discountStr}
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:460:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-458:           </div>
-459:           <div>
-460:             <label class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1 block">Round-off</label>
-                                                                                                                                 ^
-461:             <div class="flex gap-1">
-462:               <input
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:10:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:10:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
  8:   let { data }: { data: any } = $props();
  9: 
@@ -265,7 +81,7 @@ https://svelte.dev/e/state_referenced_locally
                                         ^
 11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
 12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:11:37 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:11:37 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
  9: 
 10:   let suppliers = $state<any[]>(data.suppliers ?? []);
@@ -273,7 +89,7 @@ https://svelte.dev/e/state_referenced_locally
                                              ^
 12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
 13:   let adjustments = $state<any[]>(data.adjustments ?? []);
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:12:39 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:12:39 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 10:   let suppliers = $state<any[]>(data.suppliers ?? []);
 11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
@@ -281,7 +97,7 @@ https://svelte.dev/e/state_referenced_locally
                                                ^
 13:   let adjustments = $state<any[]>(data.adjustments ?? []);
 14: 
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:13:34 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:13:34 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
 12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
@@ -289,7 +105,7 @@ https://svelte.dev/e/state_referenced_locally
                                           ^
 14: 
 15:   let activeTab = $state<"overview" | "suppliers" | "orders" | "lowstock">("overview");
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:343:39 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:343:39 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
 https://svelte.dev/e/attribute_quoted
 341:                 <div class="w-10 h-10 rounded-lg flex items-center justify-center
 342:                   {prod.qty === 0 ? 'bg-rose-500/10' : 'bg-amber-500/10'}">
@@ -297,7 +113,7 @@ https://svelte.dev/e/attribute_quoted
                                                                                                          ^
 344:                 </div>
 345:                 <div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:397:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:397:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 395:       <div class="space-y-3">
 396:         <div>
@@ -305,7 +121,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                    ^
 398:           <input class="input-field" bind:value={sForm.name} placeholder="Supplier name" />
 399:         </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:402:12 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:402:12 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 400:         <div class="grid grid-cols-2 gap-3">
 401:           <div>
@@ -313,7 +129,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                              ^
 403:             <input class="input-field" bind:value={sForm.contactName} placeholder="Contact name" />
 404:           </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:406:12 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:406:12 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 404:           </div>
 405:           <div>
@@ -321,7 +137,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                     ^
 407:             <input class="input-field" bind:value={sForm.phone} placeholder="Phone number" />
 408:           </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:411:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:411:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 409:         </div>
 410:         <div>
@@ -329,7 +145,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                   ^
 412:           <input class="input-field" bind:value={sForm.email} placeholder="Email address" />
 413:         </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:415:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:415:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 413:         </div>
 414:         <div>
@@ -337,7 +153,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                   ^
 416:           <textarea class="input-field" bind:value={sForm.notes} rows="2" placeholder="Any notes…"></textarea>
 417:         </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:437:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:437:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 435:       <div class="space-y-3">
 436:         <div>
@@ -345,7 +161,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                        ^
 438:           <select class="input-field" bind:value={poForm.supplierId}>
 439:             <option value="">Select supplier…</option>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:446:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:446:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 444:         </div>
 445:         <div>
@@ -353,7 +169,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                   ^
 447:           <input class="input-field" bind:value={poForm.notes} placeholder="PO notes" />
 448:         </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:450:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:450:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 448:         </div>
 449:         <div>
@@ -361,7 +177,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                   ^
 451:           {#each poForm.items as _, idx}
 452:             <div class="grid grid-cols-[1fr_60px_80px_30px] gap-2 mb-2">
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:490:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:490:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 488:       <div class="space-y-3">
 489:         <div>
@@ -369,7 +185,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                                  ^
 491:           <input class="input-field" type="number" bind:value={adjForm.adjustmentQty} placeholder="0" />
 492:           <p class="text-[10px] text-muted-foreground mt-1">New stock: {adjustProduct.qty + adjForm.adjustmentQty}</p>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:495:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:495:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 493:         </div>
 494:         <div>
@@ -377,7 +193,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                      ^
 496:           <select class="input-field" bind:value={adjForm.reason}>
 497:             {#each Object.entries(REASON_LABELS) as [key, label]}
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:503:10 A form label must be associated with a control
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:503:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 501:         </div>
 502:         <div>
@@ -385,7 +201,95 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                   ^
 504:           <textarea class="input-field" bind:value={adjForm.notes} rows="2" placeholder="Optional notes…"></textarea>
 505:         </div>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:18:31 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+4: 
+5:   let { data }: { data: any } = $props();
+6:   const shop = data.activeShop;
+                      ^
+7: 
+8:   let isSaving = $state(false);
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:51:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+49:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+50:           <div class="space-y-1.5">
+51:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Shop Name</label>
+                                                                                                                     ^
+52:             <input class="input-field" bind:value={formData.name} required />
+53:           </div>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:55:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+53:           </div>
+54:           <div class="space-y-1.5">
+55:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Slug (read-only)</label>
+                                                                                                                            ^
+56:             <input class="input-field bg-muted/40" value={shop.slug} disabled />
+57:           </div>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:71:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+69:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+70:           <div class="space-y-1.5">
+71:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
+                                                                                                                 ^
+72:             <input class="input-field" bind:value={formData.phone} placeholder="+91 98765 43210" />
+73:           </div>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:75:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+73:           </div>
+74:           <div class="space-y-1.5">
+75:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
+                                                                                                                 ^
+76:             <input class="input-field" type="email" bind:value={formData.email} placeholder="shop@example.com" />
+77:           </div>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:80:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+78:         </div>
+79:         <div class="space-y-1.5">
+80:           <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Address</label>
+                                                                                                                 ^
+81:           <textarea class="input-field" bind:value={formData.address} rows="2" placeholder="Full shop address…"></textarea>
+82:         </div>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:96:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+94:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+95:           <div class="space-y-1.5">
+96:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Type</label>
+                                                                                                                ^
+97:             <select class="input-field" bind:value={formData.defaultDiscountType}>
+98:               <option value="none">No default discount</option>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:105:14 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+103:           {#if formData.defaultDiscountType !== 'none'}
+104:             <div class="space-y-1.5">
+105:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                           ^
+106:                 Value {formData.defaultDiscountType === 'percentage' ? '(%)' : `(${data.activeShop?.currencySymbol ?? '$'})`}
+107:               </label>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/locale/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+4: 
+5:   let { data }: { data: any } = $props();
+6:   const shop = data.activeShop;
+                      ^
+7: 
+8:   const timezones = [
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:7:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+ 5: 
+ 6:   let { data }: { data: any } = $props();
+ 7:   const shop = data.activeShop;
+                       ^
+ 8: 
+ 9:   let paletteId = $state(shop.paletteId ?? "graphite-mint");
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:155:30 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+153:               : 'border-border/40 hover:border-border hover:bg-secondary/30'}"
+154:         >
+155:           <opt.icon size={20} class="{active ? 'text-foreground' : 'text-muted-foreground'}" />
+                                                                                                 ^
+156:           <div class="text-center">
+157:             <p class="text-[12px] font-bold text-foreground">{opt.label}</p>
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:18:31 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
 16:   type StockFilter = "all" | "in" | "low" | "out";
 17:   let stockFilter = $state<StockFilter>("all");
@@ -393,7 +297,7 @@ https://svelte.dev/e/state_referenced_locally
                                        ^
 19:   type SortKey = "name-asc" | "name-desc" | "stock-asc" | "stock-desc";
 20:   let sortKey = $state<SortKey>("name-asc");
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:264:35 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:264:35 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
 https://svelte.dev/e/attribute_quoted
 262:       <div class="flex items-center gap-2 mb-1.5">
 263:         <div class="w-7 h-7 rounded-md {stockStats.low > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
@@ -401,7 +305,7 @@ https://svelte.dev/e/attribute_quoted
                                                                                                             ^
 265:         </div>
 266:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Low Stock</span>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:274:29 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+8:32:12 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:274:29 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
 https://svelte.dev/e/attribute_quoted
 272:       <div class="flex items-center gap-2 mb-1.5">
 273:         <div class="w-7 h-7 rounded-md {stockStats.out > 0 ? 'bg-destructive/10' : 'bg-emerald-500/10'} flex items-center justify-center">
@@ -409,31 +313,47 @@ https://svelte.dev/e/attribute_quoted
                                                                                                         ^
 275:         </div>
 276:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Out of Stock</span>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:7:30 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:9:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
 https://svelte.dev/e/state_referenced_locally
- 5:   let { data }: { data: any } = $props();
+ 7: 
+ 8:   let { data }: { data: any } = $props();
+ 9:   const shop = data.activeShop;
+                       ^
+10: 
+11:   let taxRateStr = $state(String(shop.taxRate ?? 0));
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:64:10 Self-closing HTML tags for non-void elements are ambiguous — use `<span ...></span>` rather than `<span ... />`
+https://svelte.dev/e/element_invalid_self_closing_tag
+62:       >
+63:         <div class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors {taxInclusive ? 'bg-primary' : 'bg-muted'}">
+64:           <span class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform {taxInclusive ? 'translate-x-4' : 'translate-x-0'}" />
+                                                                                                                                                                                    ^
+65:         </div>
+66:         <div>
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:452:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+450:         <div class="grid grid-cols-2 gap-2 mb-3">
+451:           <div>
+452:             <label class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1 block">Discount</label>
+                                                                                                                                ^
+453:             <input
+454:               bind:value={discountStr}
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:460:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+458:           </div>
+459:           <div>
+460:             <label class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-1 block">Round-off</label>
+                                                                                                                                 ^
+461:             <div class="flex gap-1">
+462:               <input
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/receipt/+page.svelte:8:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
  6: 
- 7:   let members = $state<any[]>(data.members ?? []);
-                                      ^
- 8:   let showInvite = $state(false);
- 9:   let inviteEmail = $state("");
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:194:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-192:       <div class="space-y-3">
-193:         <div>
-194:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Email Address *</label>
-                                                                                                            ^
-195:           <input class="input-field" type="email" bind:value={inviteEmail} placeholder="colleague@example.com" />
-196:           <p class="text-[10px] text-muted-foreground mt-1">They must already have a Shelf account to be invited.</p>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:199:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-197:         </div>
-198:         <div>
-199:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Role *</label>
-                                                                                                   ^
-200:           <select class="input-field" bind:value={inviteRole}>
-201:             <option value="cashier">Cashier — Process sales, view products</option>
-7:15:55 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/+page.svelte:308:27 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+ 7:   let { data }: { data: any } = $props();
+ 8:   const shop = data.activeShop;
+                       ^
+ 9: 
+10:   let header = $state(shop.receiptHeader || "");
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/+page.svelte:308:27 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
 https://svelte.dev/e/attribute_quoted
 306:       <div class="flex items-center gap-2 mb-1.5">
 307:         <div class="w-7 h-7 rounded-md {stats.creditTotal > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
@@ -441,379 +361,91 @@ https://svelte.dev/e/attribute_quoted
                                                                                                        ^
 309:         </div>
 310:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">On Credit</span>
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/categories/+page.svelte:10:33 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 8:   let { data } = $props<{ data: any }>();
+ 9: 
+10:   let categories = $state<any[]>(data.categories ?? []);
+                                         ^
+11:   let showDialog = $state(false);
+12:   let editingId = $state<string | null>(null);
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:7:30 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 5:   let { data }: { data: any } = $props();
+ 6: 
+ 7:   let members = $state<any[]>(data.members ?? []);
+                                      ^
+ 8:   let showInvite = $state(false);
+ 9:   let inviteEmail = $state("");
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:194:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+192:       <div class="space-y-3">
+193:         <div>
+194:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Email Address *</label>
+                                                                                                            ^
+195:           <input class="input-field" type="email" bind:value={inviteEmail} placeholder="colleague@example.com" />
+196:           <p class="text-[10px] text-muted-foreground mt-1">They must already have a Shelf account to be invited.</p>
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:199:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+197:         </div>
+198:         <div>
+199:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Role *</label>
+                                                                                                   ^
+200:           <select class="input-field" bind:value={inviteRole}>
+201:             <option value="cashier">Cashier — Process sales, view products</option>
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:9:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 7: 
+ 8:   let { data }: { data: any } = $props();
+ 9:   let customers = $state<any[]>(data.customers ?? []);
+                                        ^
+10: 
+11:   let search = $state("");
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 Visible, non-interactive element `<div>` with a click event must be accompanied by a keyboard event handler. Consider whether an interactive element such as `<button type="button">` or `<a>` might be more appropriate
+https://svelte.dev/e/a11y_click_events_have_key_events
+198:                 {/if}
+199:                 <!-- Actions -->
+200:                 <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" onclick={(e: Event) => e.preventDefault()}>
+                           ^
+201:                   <button class="p-1.5 rounded-md hover:bg-secondary transition-colors" onclick={() => openEdit(c)} title="Edit">
+202:                     <Pencil size={13} class="text-muted-foreground" />
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 `<div>` with a click handler must have an ARIA role
+https://svelte.dev/e/a11y_no_static_element_interactions
+198:                 {/if}
+199:                 <!-- Actions -->
+200:                 <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" onclick={(e: Event) => e.preventDefault()}>
+                           ^
+201:                   <button class="p-1.5 rounded-md hover:bg-secondary transition-colors" onclick={() => openEdit(c)} title="Edit">
+202:                     <Pencil size={13} class="text-muted-foreground" />
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:308:22 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+306:                   <div class="flex gap-2 pl-6">
+307:                     <div class="flex-1">
+308:                       <label class="text-[10px] text-muted-foreground mb-0.5 block">Qty</label>
+                                                                                                    ^
+309:                       <input
+310:                         type="number"
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:322:22 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+320:                     </div>
+321:                     <div class="flex-1">
+322:                       <label class="text-[10px] text-muted-foreground mb-0.5 block">Condition</label>
+                                                                                                          ^
+323:                       <select
+324:                         onchange={(e) => {
+8:32:13 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:357:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+355:         <!-- Notes -->
+356:         <div>
+357:           <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-1.5 block">Notes (optional)</label>
+                                                                                                                                        ^
+358:           <textarea
+359:             bind:value={returnNotes}
 ✓ 4642 modules transformed.
 rendering chunks...
 vite v8.3.0 building client environment for production...
 transforming...
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:18:31 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-16:   type StockFilter = "all" | "in" | "low" | "out";
-17:   let stockFilter = $state<StockFilter>("all");
-18:   let products = $state<any[]>(data.products ?? []);
-                                       ^
-19:   type SortKey = "name-asc" | "name-desc" | "stock-asc" | "stock-desc";
-20:   let sortKey = $state<SortKey>("name-asc");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:264:35 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-262:       <div class="flex items-center gap-2 mb-1.5">
-263:         <div class="w-7 h-7 rounded-md {stockStats.low > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
-264:           <AlertTriangle size={13} class="{stockStats.low > 0 ? 'text-amber-500' : 'text-emerald-500'}" />
-                                                                                                            ^
-265:         </div>
-266:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Low Stock</span>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:274:29 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-272:       <div class="flex items-center gap-2 mb-1.5">
-273:         <div class="w-7 h-7 rounded-md {stockStats.out > 0 ? 'bg-destructive/10' : 'bg-emerald-500/10'} flex items-center justify-center">
-274:           <Package size={13} class="{stockStats.out > 0 ? 'text-destructive' : 'text-emerald-500'}" />
-                                                                                                        ^
-275:         </div>
-276:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Out of Stock</span>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:7:30 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
- 5:   let { data }: { data: any } = $props();
- 6: 
- 7:   let members = $state<any[]>(data.members ?? []);
-                                      ^
- 8:   let showInvite = $state(false);
- 9:   let inviteEmail = $state("");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:194:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-192:       <div class="space-y-3">
-193:         <div>
-194:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Email Address *</label>
-                                                                                                            ^
-195:           <input class="input-field" type="email" bind:value={inviteEmail} placeholder="colleague@example.com" />
-196:           <p class="text-[10px] text-muted-foreground mt-1">They must already have a Shelf account to be invited.</p>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:199:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-197:         </div>
-198:         <div>
-199:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Role *</label>
-                                                                                                   ^
-200:           <select class="input-field" bind:value={inviteRole}>
-201:             <option value="cashier">Cashier — Process sales, view products</option>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:7:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
- 5: 
- 6:   let { data }: { data: any } = $props();
- 7:   const shop = data.activeShop;
-                       ^
- 8: 
- 9:   let paletteId = $state(shop.paletteId ?? "graphite-mint");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:155:30 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-153:               : 'border-border/40 hover:border-border hover:bg-secondary/30'}"
-154:         >
-155:           <opt.icon size={20} class="{active ? 'text-foreground' : 'text-muted-foreground'}" />
-                                                                                                 ^
-156:           <div class="text-center">
-157:             <p class="text-[12px] font-bold text-foreground">{opt.label}</p>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:10:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
- 8:   let { data }: { data: any } = $props();
- 9: 
-10:   let suppliers = $state<any[]>(data.suppliers ?? []);
-                                        ^
-11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
-12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:11:37 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
- 9: 
-10:   let suppliers = $state<any[]>(data.suppliers ?? []);
-11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
-                                             ^
-12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
-13:   let adjustments = $state<any[]>(data.adjustments ?? []);
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:12:39 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-10:   let suppliers = $state<any[]>(data.suppliers ?? []);
-11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
-12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
-                                               ^
-13:   let adjustments = $state<any[]>(data.adjustments ?? []);
-14: 
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:13:34 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
-12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
-13:   let adjustments = $state<any[]>(data.adjustments ?? []);
-                                          ^
-14: 
-15:   let activeTab = $state<"overview" | "suppliers" | "orders" | "lowstock">("overview");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:343:39 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-341:                 <div class="w-10 h-10 rounded-lg flex items-center justify-center
-342:                   {prod.qty === 0 ? 'bg-rose-500/10' : 'bg-amber-500/10'}">
-343:                   <Warehouse size={16} class="{prod.qty === 0 ? 'text-rose-500' : 'text-amber-600'}" />
-                                                                                                         ^
-344:                 </div>
-345:                 <div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:397:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-395:       <div class="space-y-3">
-396:         <div>
-397:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Name *</label>
-                                                                                                   ^
-398:           <input class="input-field" bind:value={sForm.name} placeholder="Supplier name" />
-399:         </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:402:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-400:         <div class="grid grid-cols-2 gap-3">
-401:           <div>
-402:             <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Contact Person</label>
-                                                                                                             ^
-403:             <input class="input-field" bind:value={sForm.contactName} placeholder="Contact name" />
-404:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:406:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-404:           </div>
-405:           <div>
-406:             <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Phone</label>
-                                                                                                    ^
-407:             <input class="input-field" bind:value={sForm.phone} placeholder="Phone number" />
-408:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:411:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-409:         </div>
-410:         <div>
-411:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Email</label>
-                                                                                                  ^
-412:           <input class="input-field" bind:value={sForm.email} placeholder="Email address" />
-413:         </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:415:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-413:         </div>
-414:         <div>
-415:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Notes</label>
-                                                                                                  ^
-416:           <textarea class="input-field" bind:value={sForm.notes} rows="2" placeholder="Any notes…"></textarea>
-417:         </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:437:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-435:       <div class="space-y-3">
-436:         <div>
-437:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Supplier *</label>
-                                                                                                       ^
-438:           <select class="input-field" bind:value={poForm.supplierId}>
-439:             <option value="">Select supplier…</option>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:446:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-444:         </div>
-445:         <div>
-446:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Notes</label>
-                                                                                                  ^
-447:           <input class="input-field" bind:value={poForm.notes} placeholder="PO notes" />
-448:         </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:450:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-448:         </div>
-449:         <div>
-450:           <label class="text-[11px] font-bold text-muted-foreground mb-2 block">Items</label>
-                                                                                                  ^
-451:           {#each poForm.items as _, idx}
-452:             <div class="grid grid-cols-[1fr_60px_80px_30px] gap-2 mb-2">
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:490:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-488:       <div class="space-y-3">
-489:         <div>
-490:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Adjustment (+ to add, − to subtract)</label>
-                                                                                                                                 ^
-491:           <input class="input-field" type="number" bind:value={adjForm.adjustmentQty} placeholder="0" />
-492:           <p class="text-[10px] text-muted-foreground mt-1">New stock: {adjustProduct.qty + adjForm.adjustmentQty}</p>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:495:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-493:         </div>
-494:         <div>
-495:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Reason *</label>
-                                                                                                     ^
-496:           <select class="input-field" bind:value={adjForm.reason}>
-497:             {#each Object.entries(REASON_LABELS) as [key, label]}
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:503:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-501:         </div>
-502:         <div>
-503:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Notes</label>
-                                                                                                  ^
-504:           <textarea class="input-field" bind:value={adjForm.notes} rows="2" placeholder="Optional notes…"></textarea>
-505:         </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/categories/+page.svelte:10:33 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
- 8:   let { data } = $props<{ data: any }>();
- 9: 
-10:   let categories = $state<any[]>(data.categories ?? []);
-                                         ^
-11:   let showDialog = $state(false);
-12:   let editingId = $state<string | null>(null);
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:9:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
- 7: 
- 8:   let { data }: { data: any } = $props();
- 9:   const shop = data.activeShop;
-                       ^
-10: 
-11:   let taxRateStr = $state(String(shop.taxRate ?? 0));
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:64:10 Self-closing HTML tags for non-void elements are ambiguous — use `<span ...></span>` rather than `<span ... />`
-https://svelte.dev/e/element_invalid_self_closing_tag
-62:       >
-63:         <div class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors {taxInclusive ? 'bg-primary' : 'bg-muted'}">
-64:           <span class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform {taxInclusive ? 'translate-x-4' : 'translate-x-0'}" />
-                                                                                                                                                                                    ^
-65:         </div>
-66:         <div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/+page.svelte:308:27 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-306:       <div class="flex items-center gap-2 mb-1.5">
-307:         <div class="w-7 h-7 rounded-md {stats.creditTotal > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
-308:           <Clock size={13} class="{stats.creditTotal > 0 ? 'text-amber-500' : 'text-emerald-500'}" />
-                                                                                                       ^
-309:         </div>
-310:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">On Credit</span>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:12:24 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-10: 
-11:   let showEditDialog = $state(false);
-12:   let formName = $state(data.customer?.name || "");
-                                ^
-13:   let formPhone = $state(data.customer?.phone || "");
-14:   let formEmail = $state(data.customer?.email || "");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:13:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-11:   let showEditDialog = $state(false);
-12:   let formName = $state(data.customer?.name || "");
-13:   let formPhone = $state(data.customer?.phone || "");
-                                 ^
-14:   let formEmail = $state(data.customer?.email || "");
-15:   let formNotes = $state(data.customer?.notes || "");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:14:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-12:   let formName = $state(data.customer?.name || "");
-13:   let formPhone = $state(data.customer?.phone || "");
-14:   let formEmail = $state(data.customer?.email || "");
-                                 ^
-15:   let formNotes = $state(data.customer?.notes || "");
-16:   let isSaving = $state(false);
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:15:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
-https://svelte.dev/e/state_referenced_locally
-13:   let formPhone = $state(data.customer?.phone || "");
-14:   let formEmail = $state(data.customer?.email || "");
-15:   let formNotes = $state(data.customer?.notes || "");
-                                 ^
-16:   let isSaving = $state(false);
-17: 
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:192:34 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
-https://svelte.dev/e/attribute_quoted
-190:         <div class="flex items-center gap-2 mb-2">
-191:           <div class="w-7 h-7 rounded-md {outstanding > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
-192:             <CreditCard size={13} class="{outstanding > 0 ? 'text-amber-500' : 'text-emerald-500'}" />
-                                                                                                        ^
-193:           </div>
-194:           <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Outstanding</span>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:277:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-275:         <form onsubmit={handleUpdate} class="space-y-4">
-276:           <div class="space-y-1.5">
-277:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
-                                                                                                                      ^
-278:             <input bind:value={formName} required class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
-279:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:282:14 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-280:           <div class="grid grid-cols-2 gap-4">
-281:             <div class="space-y-1.5">
-282:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
-                                                                                                                    ^
-283:               <input bind:value={formPhone} type="tel" class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
-284:             </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:286:14 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-284:             </div>
-285:             <div class="space-y-1.5">
-286:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
-                                                                                                                    ^
-287:               <input bind:value={formEmail} type="email" class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
-288:             </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:291:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-289:           </div>
-290:           <div class="space-y-1.5">
-291:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Notes</label>
-                                                                                                                  ^
-292:             <textarea bind:value={formNotes} rows="2" class="w-full rounded-lg bg-muted/20 border border-border/50 px-3 py-2 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors resize-none"></textarea>
-293:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
-4: 
-5:   let { data }: { data: any } = $props();
-6:   const shop = data.activeShop;
-                      ^
-7: 
-8:   let isSaving = $state(false);
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:51:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-49:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-50:           <div class="space-y-1.5">
-51:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Shop Name</label>
-                                                                                                                     ^
-52:             <input class="input-field" bind:value={formData.name} required />
-53:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:55:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-53:           </div>
-54:           <div class="space-y-1.5">
-55:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Slug (read-only)</label>
-                                                                                                                            ^
-56:             <input class="input-field bg-muted/40" value={shop.slug} disabled />
-57:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:71:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-69:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-70:           <div class="space-y-1.5">
-71:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
-                                                                                                                 ^
-72:             <input class="input-field" bind:value={formData.phone} placeholder="+91 98765 43210" />
-73:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:75:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-73:           </div>
-74:           <div class="space-y-1.5">
-75:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
-                                                                                                                 ^
-76:             <input class="input-field" type="email" bind:value={formData.email} placeholder="shop@example.com" />
-77:           </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:80:10 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-78:         </div>
-79:         <div class="space-y-1.5">
-80:           <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Address</label>
-                                                                                                                 ^
-81:           <textarea class="input-field" bind:value={formData.address} rows="2" placeholder="Full shop address…"></textarea>
-82:         </div>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:96:12 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-94:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-95:           <div class="space-y-1.5">
-96:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Type</label>
-                                                                                                                ^
-97:             <select class="input-field" bind:value={formData.defaultDiscountType}>
-98:               <option value="none">No default discount</option>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:105:14 A form label must be associated with a control
-https://svelte.dev/e/a11y_label_has_associated_control
-103:           {#if formData.defaultDiscountType !== 'none'}
-104:             <div class="space-y-1.5">
-105:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                           ^
-106:                 Value {formData.defaultDiscountType === 'percentage' ? '(%)' : `(${data.activeShop?.currencySymbol ?? '$'})`}
-107:               </label>
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/locale/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
-https://svelte.dev/e/state_referenced_locally
-4: 
-5:   let { data }: { data: any } = $props();
-6:   const shop = data.activeShop;
-                      ^
-7: 
-8:   const timezones = [
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:9:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:9:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
  7: 
  8:   let { data }: { data: any } = $props();
@@ -821,7 +453,7 @@ https://svelte.dev/e/state_referenced_locally
                                         ^
 10: 
 11:   let search = $state("");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 Visible, non-interactive element `<div>` with a click event must be accompanied by a keyboard event handler. Consider whether an interactive element such as `<button type="button">` or `<a>` might be more appropriate
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 Visible, non-interactive element `<div>` with a click event must be accompanied by a keyboard event handler. Consider whether an interactive element such as `<button type="button">` or `<a>` might be more appropriate
 https://svelte.dev/e/a11y_click_events_have_key_events
 198:                 {/if}
 199:                 <!-- Actions -->
@@ -829,7 +461,7 @@ https://svelte.dev/e/a11y_click_events_have_key_events
                            ^
 201:                   <button class="p-1.5 rounded-md hover:bg-secondary transition-colors" onclick={() => openEdit(c)} title="Edit">
 202:                     <Pencil size={13} class="text-muted-foreground" />
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 `<div>` with a click handler must have an ARIA role
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/+page.svelte:200:16 `<div>` with a click handler must have an ARIA role
 https://svelte.dev/e/a11y_no_static_element_interactions
 198:                 {/if}
 199:                 <!-- Actions -->
@@ -837,15 +469,103 @@ https://svelte.dev/e/a11y_no_static_element_interactions
                            ^
 201:                   <button class="p-1.5 rounded-md hover:bg-secondary transition-colors" onclick={() => openEdit(c)} title="Edit">
 202:                     <Pencil size={13} class="text-muted-foreground" />
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/receipt/+page.svelte:8:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:12:24 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
 https://svelte.dev/e/state_referenced_locally
- 6: 
- 7:   let { data }: { data: any } = $props();
- 8:   const shop = data.activeShop;
-                       ^
- 9: 
-10:   let header = $state(shop.receiptHeader || "");
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:452:12 A form label must be associated with a control
+10: 
+11:   let showEditDialog = $state(false);
+12:   let formName = $state(data.customer?.name || "");
+                                ^
+13:   let formPhone = $state(data.customer?.phone || "");
+14:   let formEmail = $state(data.customer?.email || "");
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:13:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+11:   let showEditDialog = $state(false);
+12:   let formName = $state(data.customer?.name || "");
+13:   let formPhone = $state(data.customer?.phone || "");
+                                 ^
+14:   let formEmail = $state(data.customer?.email || "");
+15:   let formNotes = $state(data.customer?.notes || "");
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:14:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+12:   let formName = $state(data.customer?.name || "");
+13:   let formPhone = $state(data.customer?.phone || "");
+14:   let formEmail = $state(data.customer?.email || "");
+                                 ^
+15:   let formNotes = $state(data.customer?.notes || "");
+16:   let isSaving = $state(false);
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:15:25 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+13:   let formPhone = $state(data.customer?.phone || "");
+14:   let formEmail = $state(data.customer?.email || "");
+15:   let formNotes = $state(data.customer?.notes || "");
+                                 ^
+16:   let isSaving = $state(false);
+17: 
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:192:34 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+190:         <div class="flex items-center gap-2 mb-2">
+191:           <div class="w-7 h-7 rounded-md {outstanding > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
+192:             <CreditCard size={13} class="{outstanding > 0 ? 'text-amber-500' : 'text-emerald-500'}" />
+                                                                                                        ^
+193:           </div>
+194:           <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Outstanding</span>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:277:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+275:         <form onsubmit={handleUpdate} class="space-y-4">
+276:           <div class="space-y-1.5">
+277:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
+                                                                                                                      ^
+278:             <input bind:value={formName} required class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
+279:           </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:282:14 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+280:           <div class="grid grid-cols-2 gap-4">
+281:             <div class="space-y-1.5">
+282:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
+                                                                                                                    ^
+283:               <input bind:value={formPhone} type="tel" class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
+284:             </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:286:14 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+284:             </div>
+285:             <div class="space-y-1.5">
+286:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
+                                                                                                                    ^
+287:               <input bind:value={formEmail} type="email" class="w-full h-10 rounded-lg bg-muted/20 border border-border/50 px-3 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors" />
+288:             </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/customers/[id]/+page.svelte:291:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+289:           </div>
+290:           <div class="space-y-1.5">
+291:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Notes</label>
+                                                                                                                  ^
+292:             <textarea bind:value={formNotes} rows="2" class="w-full rounded-lg bg-muted/20 border border-border/50 px-3 py-2 text-[13px] font-medium outline-none focus:border-primary/50 transition-colors resize-none"></textarea>
+293:           </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:18:31 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+16:   type StockFilter = "all" | "in" | "low" | "out";
+17:   let stockFilter = $state<StockFilter>("all");
+18:   let products = $state<any[]>(data.products ?? []);
+                                       ^
+19:   type SortKey = "name-asc" | "name-desc" | "stock-asc" | "stock-desc";
+20:   let sortKey = $state<SortKey>("name-asc");
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:264:35 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+262:       <div class="flex items-center gap-2 mb-1.5">
+263:         <div class="w-7 h-7 rounded-md {stockStats.low > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
+264:           <AlertTriangle size={13} class="{stockStats.low > 0 ? 'text-amber-500' : 'text-emerald-500'}" />
+                                                                                                            ^
+265:         </div>
+266:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Low Stock</span>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/products/+page.svelte:274:29 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+272:       <div class="flex items-center gap-2 mb-1.5">
+273:         <div class="w-7 h-7 rounded-md {stockStats.out > 0 ? 'bg-destructive/10' : 'bg-emerald-500/10'} flex items-center justify-center">
+274:           <Package size={13} class="{stockStats.out > 0 ? 'text-destructive' : 'text-emerald-500'}" />
+                                                                                                        ^
+275:         </div>
+276:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Out of Stock</span>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:452:12 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 450:         <div class="grid grid-cols-2 gap-2 mb-3">
 451:           <div>
@@ -853,7 +573,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                                 ^
 453:             <input
 454:               bind:value={discountStr}
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:460:12 A form label must be associated with a control
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/pos/+page.svelte:460:12 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 458:           </div>
 459:           <div>
@@ -861,7 +581,159 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                                  ^
 461:             <div class="flex gap-1">
 462:               <input
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:308:22 A form label must be associated with a control
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/receipt/+page.svelte:8:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+ 6: 
+ 7:   let { data }: { data: any } = $props();
+ 8:   const shop = data.activeShop;
+                       ^
+ 9: 
+10:   let header = $state(shop.receiptHeader || "");
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:7:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+ 5: 
+ 6:   let { data }: { data: any } = $props();
+ 7:   const shop = data.activeShop;
+                       ^
+ 8: 
+ 9:   let paletteId = $state(shop.paletteId ?? "graphite-mint");
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/appearance/+page.svelte:155:30 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+153:               : 'border-border/40 hover:border-border hover:bg-secondary/30'}"
+154:         >
+155:           <opt.icon size={20} class="{active ? 'text-foreground' : 'text-muted-foreground'}" />
+                                                                                                 ^
+156:           <div class="text-center">
+157:             <p class="text-[12px] font-bold text-foreground">{opt.label}</p>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:7:30 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 5:   let { data }: { data: any } = $props();
+ 6: 
+ 7:   let members = $state<any[]>(data.members ?? []);
+                                      ^
+ 8:   let showInvite = $state(false);
+ 9:   let inviteEmail = $state("");
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:194:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+192:       <div class="space-y-3">
+193:         <div>
+194:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Email Address *</label>
+                                                                                                            ^
+195:           <input class="input-field" type="email" bind:value={inviteEmail} placeholder="colleague@example.com" />
+196:           <p class="text-[10px] text-muted-foreground mt-1">They must already have a Shelf account to be invited.</p>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/team/+page.svelte:199:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+197:         </div>
+198:         <div>
+199:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Role *</label>
+                                                                                                   ^
+200:           <select class="input-field" bind:value={inviteRole}>
+201:             <option value="cashier">Cashier — Process sales, view products</option>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/categories/+page.svelte:10:33 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 8:   let { data } = $props<{ data: any }>();
+ 9: 
+10:   let categories = $state<any[]>(data.categories ?? []);
+                                         ^
+11:   let showDialog = $state(false);
+12:   let editingId = $state<string | null>(null);
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+4: 
+5:   let { data }: { data: any } = $props();
+6:   const shop = data.activeShop;
+                      ^
+7: 
+8:   let isSaving = $state(false);
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:51:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+49:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+50:           <div class="space-y-1.5">
+51:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Shop Name</label>
+                                                                                                                     ^
+52:             <input class="input-field" bind:value={formData.name} required />
+53:           </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:55:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+53:           </div>
+54:           <div class="space-y-1.5">
+55:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Slug (read-only)</label>
+                                                                                                                            ^
+56:             <input class="input-field bg-muted/40" value={shop.slug} disabled />
+57:           </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:71:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+69:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+70:           <div class="space-y-1.5">
+71:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
+                                                                                                                 ^
+72:             <input class="input-field" bind:value={formData.phone} placeholder="+91 98765 43210" />
+73:           </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:75:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+73:           </div>
+74:           <div class="space-y-1.5">
+75:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Email</label>
+                                                                                                                 ^
+76:             <input class="input-field" type="email" bind:value={formData.email} placeholder="shop@example.com" />
+77:           </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:80:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+78:         </div>
+79:         <div class="space-y-1.5">
+80:           <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Address</label>
+                                                                                                                 ^
+81:           <textarea class="input-field" bind:value={formData.address} rows="2" placeholder="Full shop address…"></textarea>
+82:         </div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:96:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+94:         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+95:           <div class="space-y-1.5">
+96:             <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Type</label>
+                                                                                                                ^
+97:             <select class="input-field" bind:value={formData.defaultDiscountType}>
+98:               <option value="none">No default discount</option>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/general/+page.svelte:105:14 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+103:           {#if formData.defaultDiscountType !== 'none'}
+104:             <div class="space-y-1.5">
+105:               <label class="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                           ^
+106:                 Value {formData.defaultDiscountType === 'percentage' ? '(%)' : `(${data.activeShop?.currencySymbol ?? '$'})`}
+107:               </label>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/+page.svelte:308:27 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+306:       <div class="flex items-center gap-2 mb-1.5">
+307:         <div class="w-7 h-7 rounded-md {stats.creditTotal > 0 ? 'bg-amber-500/10' : 'bg-emerald-500/10'} flex items-center justify-center">
+308:           <Clock size={13} class="{stats.creditTotal > 0 ? 'text-amber-500' : 'text-emerald-500'}" />
+                                                                                                       ^
+309:         </div>
+310:         <span class="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">On Credit</span>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:9:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+ 7: 
+ 8:   let { data }: { data: any } = $props();
+ 9:   const shop = data.activeShop;
+                       ^
+10: 
+11:   let taxRateStr = $state(String(shop.taxRate ?? 0));
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/taxes/+page.svelte:64:10 Self-closing HTML tags for non-void elements are ambiguous — use `<span ...></span>` rather than `<span ... />`
+https://svelte.dev/e/element_invalid_self_closing_tag
+62:       >
+63:         <div class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors {taxInclusive ? 'bg-primary' : 'bg-muted'}">
+64:           <span class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform {taxInclusive ? 'translate-x-4' : 'translate-x-0'}" />
+                                                                                                                                                                                    ^
+65:         </div>
+66:         <div>
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/settings/locale/+page.svelte:6:15 This reference only captures the initial value of `data`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+4: 
+5:   let { data }: { data: any } = $props();
+6:   const shop = data.activeShop;
+                      ^
+7: 
+8:   const timezones = [
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:308:22 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 306:                   <div class="flex gap-2 pl-6">
 307:                     <div class="flex-1">
@@ -869,7 +741,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                     ^
 309:                       <input
 310:                         type="number"
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:322:22 A form label must be associated with a control
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:322:22 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 320:                     </div>
 321:                     <div class="flex-1">
@@ -877,7 +749,7 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                           ^
 323:                       <select
 324:                         onchange={(e) => {
-7:16:07 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:357:10 A form label must be associated with a control
+8:32:25 PM [vite-plugin-svelte] src/routes/(dashboard)/transactions/[id]/+page.svelte:357:10 A form label must be associated with a control
 https://svelte.dev/e/a11y_label_has_associated_control
 355:         <!-- Notes -->
 356:         <div>
@@ -885,6 +757,134 @@ https://svelte.dev/e/a11y_label_has_associated_control
                                                                                                                                         ^
 358:           <textarea
 359:             bind:value={returnNotes}
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:10:32 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 8:   let { data }: { data: any } = $props();
+ 9: 
+10:   let suppliers = $state<any[]>(data.suppliers ?? []);
+                                        ^
+11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
+12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:11:37 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+ 9: 
+10:   let suppliers = $state<any[]>(data.suppliers ?? []);
+11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
+                                             ^
+12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
+13:   let adjustments = $state<any[]>(data.adjustments ?? []);
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:12:39 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+10:   let suppliers = $state<any[]>(data.suppliers ?? []);
+11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
+12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
+                                               ^
+13:   let adjustments = $state<any[]>(data.adjustments ?? []);
+14: 
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:13:34 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+11:   let purchaseOrders = $state<any[]>(data.purchaseOrders ?? []);
+12:   let lowStockProducts = $state<any[]>(data.lowStockProducts ?? []);
+13:   let adjustments = $state<any[]>(data.adjustments ?? []);
+                                          ^
+14: 
+15:   let activeTab = $state<"overview" | "suppliers" | "orders" | "lowstock">("overview");
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:343:39 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
+https://svelte.dev/e/attribute_quoted
+341:                 <div class="w-10 h-10 rounded-lg flex items-center justify-center
+342:                   {prod.qty === 0 ? 'bg-rose-500/10' : 'bg-amber-500/10'}">
+343:                   <Warehouse size={16} class="{prod.qty === 0 ? 'text-rose-500' : 'text-amber-600'}" />
+                                                                                                         ^
+344:                 </div>
+345:                 <div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:397:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+395:       <div class="space-y-3">
+396:         <div>
+397:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Name *</label>
+                                                                                                   ^
+398:           <input class="input-field" bind:value={sForm.name} placeholder="Supplier name" />
+399:         </div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:402:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+400:         <div class="grid grid-cols-2 gap-3">
+401:           <div>
+402:             <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Contact Person</label>
+                                                                                                             ^
+403:             <input class="input-field" bind:value={sForm.contactName} placeholder="Contact name" />
+404:           </div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:406:12 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+404:           </div>
+405:           <div>
+406:             <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Phone</label>
+                                                                                                    ^
+407:             <input class="input-field" bind:value={sForm.phone} placeholder="Phone number" />
+408:           </div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:411:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+409:         </div>
+410:         <div>
+411:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Email</label>
+                                                                                                  ^
+412:           <input class="input-field" bind:value={sForm.email} placeholder="Email address" />
+413:         </div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:415:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+413:         </div>
+414:         <div>
+415:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Notes</label>
+                                                                                                  ^
+416:           <textarea class="input-field" bind:value={sForm.notes} rows="2" placeholder="Any notes…"></textarea>
+417:         </div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:437:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+435:       <div class="space-y-3">
+436:         <div>
+437:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Supplier *</label>
+                                                                                                       ^
+438:           <select class="input-field" bind:value={poForm.supplierId}>
+439:             <option value="">Select supplier…</option>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:446:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+444:         </div>
+445:         <div>
+446:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Notes</label>
+                                                                                                  ^
+447:           <input class="input-field" bind:value={poForm.notes} placeholder="PO notes" />
+448:         </div>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:450:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+448:         </div>
+449:         <div>
+450:           <label class="text-[11px] font-bold text-muted-foreground mb-2 block">Items</label>
+                                                                                                  ^
+451:           {#each poForm.items as _, idx}
+452:             <div class="grid grid-cols-[1fr_60px_80px_30px] gap-2 mb-2">
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:490:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+488:       <div class="space-y-3">
+489:         <div>
+490:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Adjustment (+ to add, − to subtract)</label>
+                                                                                                                                 ^
+491:           <input class="input-field" type="number" bind:value={adjForm.adjustmentQty} placeholder="0" />
+492:           <p class="text-[10px] text-muted-foreground mt-1">New stock: {adjustProduct.qty + adjForm.adjustmentQty}</p>
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:495:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+493:         </div>
+494:         <div>
+495:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Reason *</label>
+                                                                                                     ^
+496:           <select class="input-field" bind:value={adjForm.reason}>
+497:             {#each Object.entries(REASON_LABELS) as [key, label]}
+8:32:26 PM [vite-plugin-svelte] src/routes/(dashboard)/restocking/+page.svelte:503:10 A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control
+501:         </div>
+502:         <div>
+503:           <label class="text-[11px] font-bold text-muted-foreground mb-1 block">Notes</label>
+                                                                                                  ^
+504:           <textarea class="input-field" bind:value={adjForm.notes} rows="2" placeholder="Optional notes…"></textarea>
+505:         </div>
 ✓ 4708 modules transformed.
 rendering chunks...
 computing gzip size...
@@ -892,13 +892,13 @@ computing gzip size...
 .svelte-kit/output/client/.vite/manifest.json                      22.66 kB │ gzip:  2.45 kB
 .svelte-kit/output/client/_app/immutable/assets/2.KprEXRoS.css      0.43 kB │ gzip:  0.27 kB
 .svelte-kit/output/client/_app/immutable/assets/0.CYlOUgQ9.css    101.99 kB │ gzip: 15.86 kB
-.svelte-kit/output/client/_app/immutable/chunks/CrDlrCYN.js         0.02 kB │ gzip:  0.04 kB
+.svelte-kit/output/client/_app/immutable/chunks/fo5OPQBW.js         0.02 kB │ gzip:  0.04 kB
 .svelte-kit/output/client/_app/immutable/chunks/BrZ3DXnW.js         0.03 kB │ gzip:  0.05 kB
 .svelte-kit/output/client/_app/immutable/chunks/xihTtKlq.js         0.06 kB │ gzip:  0.08 kB
-.svelte-kit/output/client/_app/immutable/entry/start.Bv5Y0iZR.js    0.08 kB │ gzip:  0.09 kB
+.svelte-kit/output/client/_app/immutable/entry/start.7lB7gnzV.js    0.08 kB │ gzip:  0.09 kB
 .svelte-kit/output/client/_app/immutable/chunks/DL3FtM7T.js         0.20 kB │ gzip:  0.14 kB
-.svelte-kit/output/client/_app/immutable/chunks/T3waIucd.js         0.29 kB │ gzip:  0.16 kB
-.svelte-kit/output/client/_app/immutable/nodes/1.SQNaMUD2.js        0.35 kB │ gzip:  0.25 kB
+.svelte-kit/output/client/_app/immutable/chunks/CVcjh6pA.js         0.29 kB │ gzip:  0.16 kB
+.svelte-kit/output/client/_app/immutable/nodes/1.u0m9G7G8.js        0.35 kB │ gzip:  0.25 kB
 .svelte-kit/output/client/_app/immutable/chunks/DWaAuuIF.js         0.41 kB │ gzip:  0.30 kB
 .svelte-kit/output/client/_app/immutable/chunks/BWT2wiDu.js         0.41 kB │ gzip:  0.30 kB
 .svelte-kit/output/client/_app/immutable/chunks/DeVzV0J5.js         0.43 kB │ gzip:  0.30 kB
@@ -925,11 +925,11 @@ computing gzip size...
 .svelte-kit/output/client/_app/immutable/chunks/txa6OqZM.js         0.61 kB │ gzip:  0.40 kB
 .svelte-kit/output/client/_app/immutable/chunks/CsztMOKz.js         0.62 kB │ gzip:  0.40 kB
 .svelte-kit/output/client/_app/immutable/chunks/DQK_1S8l.js         0.62 kB │ gzip:  0.40 kB
-.svelte-kit/output/client/_app/immutable/nodes/4.KCRL4KAp.js        0.65 kB │ gzip:  0.39 kB
+.svelte-kit/output/client/_app/immutable/nodes/4.BzDg5Fli.js        0.65 kB │ gzip:  0.39 kB
 .svelte-kit/output/client/_app/immutable/chunks/D4a18GIa.js         0.70 kB │ gzip:  0.39 kB
 .svelte-kit/output/client/_app/immutable/chunks/D6vubFpf.js         0.74 kB │ gzip:  0.42 kB
 .svelte-kit/output/client/_app/immutable/chunks/0Pnb22i1.js         0.76 kB │ gzip:  0.44 kB
-.svelte-kit/output/client/_app/immutable/nodes/3.DVkqmRC6.js        0.84 kB │ gzip:  0.53 kB
+.svelte-kit/output/client/_app/immutable/nodes/3.Bz-WT_T4.js        0.84 kB │ gzip:  0.53 kB
 .svelte-kit/output/client/_app/immutable/chunks/BR6cHQl7.js         0.91 kB │ gzip:  0.44 kB
 .svelte-kit/output/client/_app/immutable/chunks/Bjy-W4x2.js         1.36 kB │ gzip:  0.65 kB
 .svelte-kit/output/client/_app/immutable/chunks/DCzBoMIE.js         1.38 kB │ gzip:  0.55 kB
@@ -947,33 +947,33 @@ computing gzip size...
 .svelte-kit/output/client/_app/immutable/chunks/BDBppoIx.js         7.74 kB │ gzip:  3.17 kB
 .svelte-kit/output/client/_app/immutable/nodes/15.C1-laLGR.js       8.06 kB │ gzip:  3.27 kB
 .svelte-kit/output/client/_app/immutable/nodes/20.gVuKfcLT.js       9.49 kB │ gzip:  3.80 kB
-.svelte-kit/output/client/_app/immutable/entry/app.CGC3AV_6.js     10.09 kB │ gzip:  3.42 kB
+.svelte-kit/output/client/_app/immutable/entry/app.DPQvjUdr.js     10.09 kB │ gzip:  3.42 kB
 .svelte-kit/output/client/_app/immutable/chunks/C1p6ub6l.js        11.24 kB │ gzip:  3.37 kB
 .svelte-kit/output/client/_app/immutable/nodes/7.CqVgPtw2.js       12.73 kB │ gzip:  4.38 kB
 .svelte-kit/output/client/_app/immutable/nodes/9.Dk72mFMj.js       14.74 kB │ gzip:  4.92 kB
 .svelte-kit/output/client/_app/immutable/nodes/8.CQ24iDsJ.js       15.42 kB │ gzip:  5.15 kB
 .svelte-kit/output/client/_app/immutable/nodes/22.D8G2Tqv8.js      15.61 kB │ gzip:  5.06 kB
 .svelte-kit/output/client/_app/immutable/chunks/MmJHNbuX.js        16.24 kB │ gzip:  5.91 kB
-.svelte-kit/output/client/_app/immutable/nodes/23.EkNxbsGC.js      18.32 kB │ gzip:  5.64 kB
+.svelte-kit/output/client/_app/immutable/nodes/23.CTNZMtGd.js      18.32 kB │ gzip:  5.64 kB
 .svelte-kit/output/client/_app/immutable/nodes/21.C-Zflxxs.js      19.67 kB │ gzip:  6.27 kB
-.svelte-kit/output/client/_app/immutable/nodes/6.DEpdG7ty.js       19.93 kB │ gzip:  6.14 kB
+.svelte-kit/output/client/_app/immutable/nodes/6.D9unuUmg.js       19.93 kB │ gzip:  6.14 kB
 .svelte-kit/output/client/_app/immutable/nodes/10.BlO7FU6p.js      22.56 kB │ gzip:  7.17 kB
 .svelte-kit/output/client/_app/immutable/nodes/12.Dg0g3n7J.js      24.29 kB │ gzip:  6.75 kB
 .svelte-kit/output/client/_app/immutable/chunks/D4mP24i6.js        27.29 kB │ gzip:  8.64 kB
-.svelte-kit/output/client/_app/immutable/chunks/CdRK8oSC.js        36.35 kB │ gzip: 13.68 kB
+.svelte-kit/output/client/_app/immutable/chunks/_i6wEM28.js        36.35 kB │ gzip: 13.68 kB
 .svelte-kit/output/client/_app/immutable/nodes/11.BkmplbFf.js      40.44 kB │ gzip: 12.11 kB
 .svelte-kit/output/client/_app/immutable/chunks/wRUndDiw.js        43.47 kB │ gzip: 13.90 kB
 .svelte-kit/output/client/_app/immutable/chunks/aBB4_Dwx.js        48.00 kB │ gzip: 14.72 kB
 .svelte-kit/output/client/_app/immutable/chunks/BKeKKeAy.js        64.00 kB │ gzip: 24.37 kB
-.svelte-kit/output/client/_app/immutable/nodes/2.Dh3XZqfy.js       86.08 kB │ gzip: 25.27 kB
-.svelte-kit/output/client/_app/immutable/nodes/0.CboqwHuI.js      230.71 kB │ gzip: 60.46 kB
+.svelte-kit/output/client/_app/immutable/nodes/2.qvLHIz_g.js       86.08 kB │ gzip: 25.27 kB
+.svelte-kit/output/client/_app/immutable/nodes/0.TFPVn10M.js      230.71 kB │ gzip: 60.46 kB
 
-✓ built in 10.83s
-[33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 10.6s of this 10.8s build (98%).
+✓ built in 11.03s
+[33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 10.8s of this 11.0s build (98%).
 The slowest hooks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
-  - vite:css transform (53%, 5.7s, 4 calls)
-  - vite-plugin-svelte:compile transform (51%, 5.5s, 2002 calls)
-  - vite-plugin-svelte:compile-module transform (13%, 1.4s, 154 calls)
+  - vite:css transform (83%, 9.1s, 4 calls)
+  - vite-plugin-svelte:compile transform (51%, 5.6s, 2002 calls)
+  - vite-plugin-svelte:compile-module transform (12%, 1.3s, 154 calls)
 These rows add up to more than the total. Callbacks can overlap, so the same time counts for more than one row.
 2 hooks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
   - vite-plugin-sveltekit-guard resolveId (18611 calls)
@@ -1090,20 +1090,20 @@ computing gzip size...
 .svelte-kit/output/server/chunks/scroll-lock.js                                          115.79 kB │ gzip: 27.64 kB
 .svelte-kit/output/server/chunks/server.js                                               129.09 kB │ gzip: 33.80 kB
 .svelte-kit/output/server/index.js                                                       130.46 kB │ gzip: 33.17 kB
-.svelte-kit/output/server/entries/pages/(dashboard)/_layout.svelte.js                    202.23 kB │ gzip: 35.50 kB
+.svelte-kit/output/server/entries/pages/(dashboard)/_layout.svelte.js                    202.23 kB │ gzip: 35.51 kB
 
-✓ built in 25.20s
+✓ built in 25.64s
 
 Run npm run preview to preview your production build locally.
 
 > Using @sveltejs/adapter-vercel
   ✔ done
-[33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 26.8s. The build took 25.2s. Hooks such as `closeBundle` run after the build ends, so hook time can be more than build time.
+[33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 27.5s. The build took 25.6s. Hooks such as `closeBundle` run after the build ends, so hook time can be more than build time.
 The slowest hooks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
-  - vite-plugin-sveltekit-compile writeBundle (57%, 14.3s, 1 call)
-  - vite:css transform (35%, 8.9s, 4 calls)
-  - vite-plugin-svelte:compile transform (22%, 5.6s, 2002 calls)
-  - vite-plugin-sveltekit-compile closeBundle (7%, 1.8s, 1 call)
+  - vite-plugin-sveltekit-compile writeBundle (57%, 14.6s, 1 call)
+  - vite:css transform (30%, 7.8s, 4 calls)
+  - vite-plugin-svelte:compile transform (22%, 5.7s, 2002 calls)
+  - vite-plugin-sveltekit-compile closeBundle (8%, 2.0s, 1 call)
   - vite-plugin-svelte:compile-module transform (6%, 1.4s, 154 calls)
 These rows add up to more than the total. Callbacks can overlap, so the same time counts for more than one row.
 2 hooks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:

@@ -23,9 +23,10 @@
     "@shelf/shared": "workspace:*",
     "@supabase/supabase-js": "^2.116.0",
     "dotenv": "^17.4.2",
-    "drizzle-orm": "^0.45.2",
     "hono": "^4.13.8",
-    "postgres": "^3.4.9",
     "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
   }
 }

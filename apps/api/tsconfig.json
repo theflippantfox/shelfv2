@@ -15,7 +15,8 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "types": [
-      "bun-types"
+      "bun-types",
+      "node"
     ],
     "paths": {
       "@shelf/db": ["../../packages/db/src/index.ts"],
