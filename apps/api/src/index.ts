@@ -47,7 +47,7 @@ app.use("*", secureHeaders());
 app.use(
   "*",
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"], // Allow Vite dev server
+    origin: process.env.CORS_ORIGIN?.split(",") ?? ["http://localhost:5173"],
     allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowHeaders: ["Authorization", "Content-Type"],
     credentials: true,

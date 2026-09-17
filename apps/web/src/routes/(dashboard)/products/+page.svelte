@@ -348,11 +348,12 @@ import { toast } from "$lib/utils/toast";
   </div>
 
   <!-- Results count -->
-  <div class="text-[11px] text-muted-foreground px-1">
+  <div class="shrink-0 text-[11px] text-muted-foreground px-1">
     Showing <span class="font-bold text-foreground">{filtered.length}</span> of {stockStats.total} products
   </div>
 
   <!-- Product cards grid -->
+  <div class="flex-1 min-h-0 overflow-y-auto">
   {#if filtered.length === 0}
     <div class="flex flex-col items-center justify-center h-48 text-muted-foreground surface-card rounded-xl border border-dashed border-border/60">
       <Package size={32} class="mb-4 opacity-20" />
@@ -420,6 +421,7 @@ import { toast } from "$lib/utils/toast";
       {/each}
     </div>
   {/if}
+  </div>
 </div>
 
 <!-- Product Create/Edit Sheet -->

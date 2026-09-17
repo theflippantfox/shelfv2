@@ -6,7 +6,9 @@ export const getApiClient = (
   customFetch: typeof fetch,
   additionalHeaders?: Record<string, string>,
 ) => {
-  const url = browser ? "/api" : "http://127.0.0.1:3000";
+  const url = browser
+    ? (import.meta.env.PUBLIC_API_URL || "/api")
+    : (process.env.PUBLIC_API_URL || "http://127.0.0.1:3000");
   return hc<AppType>(url, {
     fetch: customFetch,
     headers: additionalHeaders,
