@@ -1,6 +1,3 @@
 {
-  "installCommand": "bun install",
-  "routes": [
-    { "src": "/(.*)", "dest": "/api" }
-  ]
+  "installCommand": "bun install"
 }
